@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/css.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.min3.3.7.css">
+
+    <script src="./js/vue.min.js"></script>
+    <title>扫雷</title>
+</head>
+<body>
+    <div id="main">
+        <div id="env">
+            <div v-for='n in boxnums' :class="'box'+n" @mouseover='showdialog($event)' @mouseleave='hidedialog($event)' style="display: block;background: #fff;">
+                <span class="glyphicon glyphicon-flag" style="display: none;"></span>
+                <div :id="'dialog'+n" style="border:none;display: none;position: relative;top: -.5em;">
+                    <li type="button" @click='scanboom($event)' >扫雷</li>
+                    <li type="button"  @click='showflag($event)'>标记</li>
+                </div>
+                <span style="display: none;padding: 0;">2</span>
+            </div>
+        </div>
+        <input type="text" placeholder="请输入矩阵数" v-model='boxnum'>
+        <!-- <input type="text" placeholder="炸弹数" v-model='boomnum'> -->
+        <input type="button" @click='reset()' value="重开">
+        
+    </div>
+    
+    
+    <script src="./js/script.js"></script>
+</body>
+</html>

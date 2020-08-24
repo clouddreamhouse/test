@@ -1,0 +1,355 @@
+
+body{
+    margin: 0;
+    padding: 0;
+    overflow-x:hidden
+}
+ul{
+    list-style-type: none;
+}
+/* 导航栏 */
+div.nav{
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+}
+div.nav ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+div.nav h4{
+    color: white;
+    margin: 16px 30px 0 7px;
+}
+div.nav h5{
+    font-size: initial;
+    color: white;
+    margin: 15px;
+}
+div.nav ul.ulist_nav li{
+    float: left;
+}
+div.nav li a{
+    display: block;
+    text-decoration: none;
+    padding:14px 16px;
+    color: white;
+    font-size: 15px;
+}
+div.nav li a:hover{
+    color: rgb(241, 247, 246);
+    background-color: rgb(49, 39, 39);
+}
+
+div.nav ul.ulist_nav2 li{
+    float: right;
+}
+div.nav ul.ulist_nav2{
+    position: absolute;
+    right: 0;
+}
+/* 下拉 */
+div.dropdown-content{
+    display: none;
+}
+li#dropdown:hover div.dropdown-content{
+    display: inline;
+}
+
+
+/*主体部分*/
+div.main{
+    width: 60%;
+    position: absolute;
+    left: 20%;
+    margin-top: 5em;
+}
+div.main li {
+    list-style-type: none;
+}
+div.main  a{
+    text-decoration: none;
+    color: black;
+} 
+div.main div.blog{
+    border-style: solid;
+    border-color: rgb(230, 233, 237);
+    border-radius: 10px;
+    margin-bottom: 40px;
+    overflow: hidden;
+}
+
+div.main div.title{
+    height: 40px;
+    text-align: center;
+    background-color: white;
+    border-bottom: dashed 2px #e6e9ed;
+}
+div.main div.title a{
+    display: block;
+    padding: 9px 9px 6px;
+    margin-top: -2px;
+    height: 100%;
+}
+div.main div.title a:hover{
+    background-color: rgb(230, 233, 237);
+    border-left: 5px solid #007bff6e;
+}
+div.main div.content{
+    height: 50px;
+    text-align: center;
+    padding: 10px 15px 10px;
+    margin: 10px;
+}
+
+div.main ul.page{
+    background-color: white;
+    height: 39px;
+}
+
+div.main ul.page li{
+    float: left;
+}
+div.main ul.page li a{
+    display: block;
+    padding: 8px 12px;
+    border: solid black 1px;
+}
+div.main ul.page li a:hover{
+    background-color: rgb(230, 233, 237);
+
+}
+ul.page li span{
+    padding: 9px 12px;
+    border: solid black 1px;
+    position: relative;
+    bottom: -9px;
+}
+.active{
+    background-color: rgb(230, 233, 237);
+}
+ul select.select-meue{
+    position: relative;
+    bottom: -8px;
+    right: -10px;
+}
+/* 左侧分类小窗 */
+div.float-window{
+    width: 11%;
+    position: relative;
+    right: -10px;
+    padding-top: 5em;
+    
+}
+div.float-window div.type-of-blog{
+    border: solid rgb(230, 233, 237) 2px;
+    border-radius: 10px;
+    margin-bottom: 50px;
+    
+}
+div.float-title{
+    text-align: center;
+    padding: 10px;
+    background-color: rgb(230, 233, 237);
+}
+div.float-window div.type-of-blog ul{
+    position: relative;
+    left: -30px;
+}
+/* 表格 */
+table td{
+    width: 400px;
+}
+table td.thin{
+    width: 200px;
+}
+div.comment ul{
+    padding: 0;
+}
+span#after-time{
+    margin-right: 20px;
+}
+/* 按钮 */
+.but {
+    display: inline-block;
+    border-radius: 15px;
+    background-color: rgb(54, 137, 214);
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 15px;
+    padding: 9px 16px;
+    width: 90px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    outline: none;
+    }
+    
+.but span {
+cursor: pointer;
+display: inline-block;
+position: relative;
+transition: 0.5s;
+}
+
+.but span:after {
+content: '»';
+position: absolute;
+opacity: 0;
+top: 0;
+right: -20px;
+transition: 0.5s;
+}
+
+.but:hover span {
+padding-right: 25px;
+}
+
+.but:hover span:after {
+opacity: 1;
+right: 0;
+}
+/* 按钮2 */
+button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 8px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    outline: none;
+}
+#cancel-reply {
+    background-color: white;
+    color: black;
+    border: 2px solid #e7e7e7;
+    float: right;
+}
+
+#cancel-reply:hover {background-color: #e7e7e7;}
+
+/* 评论历史 */
+div.post-comment{
+    border: 1px black dashed;
+    padding: 1em;border-bottom: none;
+    
+}
+
+
+/* 回复框 */
+div#reply-to{
+    margin-bottom: 2em;
+}
+/* 碎碎念组件 */
+p.top-info span, p.top-info a{
+    margin-right:0.4em;
+}
+a.reply span.glyphicon.glyphicon-comment, span.glyphicon.glyphicon-arrow-left, span.glyphicon.glyphicon-arrow-right{
+    color: #3689d6;
+}
+
+
+/* 点赞组件 */
+div.likes {
+    width: 5em;
+    color: #3689d6;
+    cursor: pointer;
+    display: inline-block;
+    padding: 0.2em 0 0 0.3em;
+    border: 1px solid #ccc;
+    margin-bottom: 2em;
+}
+div.li-ke{
+    width: 3em;
+    color: #3689d6;
+    cursor: pointer;
+    display: inline-block;
+    padding: 0.2em 0 0 0.3em;
+}
+.glyphicon.glyphicon-trash:hover,div span.active{
+    color: #f22;                /* 点赞后颜色 */
+}
+/* 文本输入效果 */
+textarea{
+    width: 80%;
+    padding-left: 0.6em;
+}
+textarea:focus{
+    outline:none;
+    border: 4px solid #3386b773;
+    text-indent: -4px;
+    
+}
+/* 登录表单 */
+div.login_form{
+    position: absolute;
+    top: 10em;
+    left: 30%;
+
+}
+div.login_form li {
+    border: solid #e1e5e8 1px;
+    border-radius: 8px;
+    display: block;
+    list-style: none;
+    width: 40em;
+    height: 6em;
+    margin-bottom: 1em;
+    overflow: hidden;
+    
+}
+div.login_form  label{
+    display: block;
+    background-color: #e9ecef;
+    margin: 0;
+    height: 3em;
+    padding: 1.1em 34em 0 0.6em;
+}
+div.login_form input{
+    display: block;
+    border: none;
+    background-color: white;
+    width: 40em;
+    height: 3em;
+    outline: none;
+    padding-left: 0.6em;
+    
+}
+/* 表单中的text area */
+textarea.texearea_form{
+    width: 100%;
+    height: 10em;
+    border: none;
+    padding-left: 0.6em;
+}
+div.login_form p{
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+}
+form.login_form select{
+    width: 100%;
+    height: 46%;
+    border: 0;
+    padding-left: .6em;
+
+}
+select{
+    cursor: pointer;
+}
+div.errors ul{
+    padding: 0;
+    color: #f22;
+}
